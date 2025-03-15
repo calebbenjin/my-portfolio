@@ -61,8 +61,8 @@ const FiatplugCase = () => {
           Frontend Engineer focused on building the Admin Dashboard and Landing
           Page.
         </p>
-        <h2 className="font-semibold text-xl mt-2">Tech Stack:</h2>
         <h2 className="font-bold text-2xl mt-8">My Contribution</h2>
+        <h2 className="font-semibold text-xl mt-2">Tech Stack:</h2>
         <div className="flex flex-wrap gap-2 mt-4">
           {techStack?.map((stack, i) => (
             <span className="text-sm border rounded-lg px-2 py-1" key={i}>
