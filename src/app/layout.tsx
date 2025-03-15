@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "https://calebbenjamin.vercel.app",
     title: "Caleb Benjamin",
     description:
-      "One Stop for yoga and wellness in AfricaFrontend developer, an optimist, passionate about optimization, Startups and Founders.",
+      "Frontend developer, an optimist, passionate about optimization, Startups and Founders.",
     images: [
       {
         url: "https://res.cloudinary.com/calebcloud/image/upload/v1742071730/WhatsApp_Image_2025-03-15_at_21.46.23_fca5f021_ammmlp.jpg",
