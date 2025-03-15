@@ -40,7 +40,7 @@ const IntroSection = () => {
       <h1 className="text-xl font-medium mb-4">🧑‍💻Caleb Benjamin</h1>
       <p>
         I&apos;m a frontend developer and an optimist, passionate about
-        optimization, business goals, and, most importantly, Startups and
+        optimization, business goals, and, most importantly Startups and
         Founders. This led me to join{" "}
         <a href="https://www.eachblock.xyz/" className="text-zinc-400">
           Eachblock

@@ -143,7 +143,7 @@ const FiatplugCase = () => {
             href="https://www.fiatplug.com"
             className="flex">
             <Button className="bg-white text-zinc-900 hover:bg-gray-400">
-              View Website
+              View Fiatplug Website
             </Button>
           </Link>
         </div>

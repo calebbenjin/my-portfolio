@@ -7,7 +7,6 @@ import React from "react";
 
 async function CasePage({ params }: { params: any }) {
   const { slug } = await params;
-  console.log(slug);
   return (
     <div>
       {slug == "yogaexperience-africa-case-study" && <YeaCaseStudy />}

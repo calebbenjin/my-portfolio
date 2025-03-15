@@ -153,7 +153,7 @@ const YeaCaseStudy = () => {
             href="https://www.yogaexperiences.africa"
             className="flex">
             <Button className="bg-white text-zinc-900 hover:bg-gray-400">
-              View Website
+              View YEA Website
             </Button>
           </Link>
         </div>

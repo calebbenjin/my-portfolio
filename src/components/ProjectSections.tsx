@@ -13,14 +13,16 @@ import { projects } from "@/constant";
 const ProjectSections = () => {
   return (
     <section className="my-8">
-      <h2 className="font-bold text-2xl mb-6">🟠 My Best Project</h2>
+      <h2 className="font-bold text-2xl mb-6">
+        🟠 What I&apos;ve Built So Far
+      </h2>
       {projects.map((project, i) => (
         <div className=" mb-20" key={i}>
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
+          <div className="grid lg:grid-cols-2 grid-cols-2 gap-4">
             {project?.proimg?.map((image, i) => (
               <div
                 key={i}
-                className="h-70 w-full relative overflow-hidden rouned-lg">
+                className="lg:h-70 w-full relative overflow-hidden rouned-lg">
                 <Image
                   src={`${image.url}`}
                   alt="project-image"
