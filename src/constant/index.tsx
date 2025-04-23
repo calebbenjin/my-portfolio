@@ -2,7 +2,7 @@ export const projects = [
   {
     slug: "aquatrack-case-study",
     title: "Aquatrack",
-    siteurl: "https://www.yogaexperiences.africa",
+    siteurl: "https://www.aquatrackinc.com",
     proimg: [
       { url: "/Aquatrack-apps.png" },
       { url: "/Aquatrack-app-dashboard.png" },
@@ -51,7 +51,7 @@ export const projects = [
   {
     slug: "yogaexperience-africa-case-study",
     title: "Yoga Experience Africa (YEA)",
-    siteurl: "https://www.aquatrackinc.com",
+    siteurl: "https://www.yogaexperiences.africa",
     proimg: [{ url: "/yea-mockup.png" }, { url: "/Yea-web-admin.png" }],
     achivement: "Key Achievement on Yoga Experience Africa:",
     stack: [
