@@ -58,11 +58,11 @@ const WorkTogetherSection = () => {
             label: "LinkedIn",
             link: "https://www.linkedin.com/in/calebbenjin/",
           },
-          {
-            icon: <FaWhatsapp />,
-            label: "WhatsApp",
-            link: "https://wa.link/tyskat",
-          },
+          // {
+          //   icon: <FaWhatsapp />,
+          //   label: "WhatsApp",
+          //   link: "https://wa.link/tyskat",
+          // },
         ].map((btn, i) => (
           <motion.div key={i} variants={fadeIn} custom={i + 2}>
             <Link target="_blank" href={btn.link}>
