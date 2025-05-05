@@ -4,7 +4,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import { PiAddressBookLight } from "react-icons/pi";
 import { TfiEmail } from "react-icons/tfi";
-import { FaWhatsapp } from "react-icons/fa";
+// import { FaWhatsapp } from "react-icons/fa";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Link from "next/link";
