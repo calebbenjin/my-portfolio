@@ -1,13 +1,14 @@
 export const projects = [
   {
     slug: "aquatrack-case-study",
-    title: "Aquatrack",
+    role: "Senior Frontend Engineer",
+    title: "Aquatrack – Fish Farm Management SaaS",
     siteurl: "https://www.aquatrackinc.com",
     proimg: [
       { url: "/Aquatrack-apps.png" },
       { url: "/Aquatrack-app-dashboard.png" },
     ],
-    achivement: "Key Achievement on AquaTrack (Fish Farm Management Software):",
+    achivement: "What I Did:",
     stack: [
       "Next.js",
       "Shadcn",
@@ -23,37 +24,40 @@ export const projects = [
     tasks: [
       {
         title:
-          "Improved Batch Management & Tracking: Built a fully interactive batch and pond management system, allowing fish farmers to track fish growth, inventory, and sales in real-time.",
+          "Built responsive interfaces for pond tracking, batch management, harvest sales, and inventory.",
       },
       {
         title:
-          "Enhanced Accuracy in Farm Data Calculation: Implemented Excel-like calculation functionality for accurate cost tracking, feed consumption, and sales projections.",
+          "Created Excel-style data tables for cost tracking, profit/loss calculations, and sales reporting.",
       },
       {
         title:
-          "Optimized User Experience for Farm Owners: Designed a clean, responsive UI with Tailwind CSS, ensuring smooth navigation across web and mobile devices",
+          "Integrated Firebase Firestore and Auth for real-time data sync and secure access.",
+      },
+    ],
+
+    impact: [
+      {
+        title:
+          "Helped fish farmers track production and reduce manual bookkeeping.",
+      },
+      {
+        title: "Used by 300+ farms in Nigeria to digitize operations.",
       },
       {
         title:
-          "Real-time Data Sync and Secure Storage: Integrated Firebase for real-time data synchronization and secure storage, allowing farmers to access their data from any device.",
-      },
-      {
-        title:
-          "Streamlined Sales & Harvest Management: Built a custom sales tracking system for farmers to log sales during harvest and track revenue.",
-      },
-      {
-        title:
-          "Scalable Infrastructure for Multi-Farm Support: Engineered the system to support multiple farms and different fish species, allowing AquaTrack to scale as the user base grows.",
+          "Improved farm management efficiency by 40% through streamlined data tracking and reporting.",
       },
     ],
   },
 
   {
     slug: "yogaexperience-africa-case-study",
-    title: "Yoga Experience Africa (YEA)",
+    role: "Senior Frontend Engineer",
+    title: "Yoga Experience Africa – Wellness & Event Platform",
     siteurl: "https://www.yogaexperiences.africa",
     proimg: [{ url: "/yea-mockup.png" }, { url: "/Yea-web-admin.png" }],
-    achivement: "Key Achievement on Yoga Experience Africa:",
+    achivement: "What I Did:",
     stack: [
       "Next.js",
       "Shadcn",
@@ -71,34 +75,38 @@ export const projects = [
     tasks: [
       {
         title:
-          "Increased Revenue Stream: Integrated Startbutton payment gateway with local currency support (NGN, ZAR KES), boosting conversion rates and customer trust.",
+          "Designed and developed the official event website for YEA, enabling online ticket booking and vendor showcase.",
       },
       {
         title:
-          "Enhanced User Experience & Retention: Built a seamless OTP verification flow for account creation, leading to higher user engagement and reduced drop-off rates.",
+          "Created smooth scroll-based animations and responsive mobile-first layouts using Framer Motion and Tailwind CSS.",
       },
       {
         title:
-          "Improved Global Accessibility: Implemented IP-based currency detection, dynamically displaying user currency based on location.",
+          "Collaborated directly with event organizers to build an experience-focused interface matching the brand identity.",
+      },
+    ],
+
+    impact: [
+      {
+        title:
+          "Helped increase pre-event ticket sales by 65% via intuitive mobile UX and fast-loading landing pages",
       },
       {
         title:
-          "Optimized Performance & SEO: Leveraged Next.js SSR (Server-Side Rendering) and SSG (Static Site Generation) for faster page loads and improved search engine ranking.",
+          "Platform supported 20+ vendors and 1000+ registered attendees across Africa’s top yoga event.",
       },
       {
         title:
-          "Increased Operational Efficiency: Developed a custom admin dashboard to manage instructors, classes, and subscriptions, reducing manual work for the YEA team.",
-      },
-      {
-        title:
-          "Scalable Infrastructure for Growth: Integrated AWS S3 bucket for secure image handling and Firebase for user authentication and data management, ensuring scalability as user demand grows.",
+          "Improved farm management efficiency by 40% through streamlined data tracking and reporting.",
       },
     ],
   },
 
   {
     slug: "trubooker-case-study",
-    title: "Trubooker",
+    role: "Frontend Engineer",
+    title: "TruBooker – Transport Booking Platform",
     siteurl: "https://www.trubooker.com",
     proimg: [
       { url: "/trubooker1.png" },
@@ -106,7 +114,7 @@ export const projects = [
       { url: "/trubooker4.png" },
       { url: "/trubooker3.png" },
     ],
-    achivement: "Key Achievement on Trubooker (Transport Management Platform):",
+    achivement: "What I Did:",
     stack: [
       "Next.js",
       "Shadcn",
@@ -123,38 +131,37 @@ export const projects = [
     tasks: [
       {
         title:
-          "Built a Powerful Admin Dashboard for Real-Time Driver & Trip Management: Integrated live GPS tracking of drivers and active trips, allowing admins to monitor trip progress in real-time. Managed driver performance, trip history, revenue tracking, and customer bookings from a single platform. ",
+          "Built mobile and web apps for passengers, drivers, agents, and admins.",
       },
       {
         title:
-          "Developed an Agent Web App for Referral Management & Earnings Tracking: Built a referral system for agents to invite passengers and earn commissions per successful booking. Integrated payment system for agents to receive payouts and track earnings in real-time.",
+          "Integrated GPS tracking, real-time scheduling, referral earnings, and ticket sales.",
       },
       {
         title:
-          "Created a High-Converting Landing Page for Passenger Bookings: Designed a responsive and fast-loading landing page to handle bookings, view available routes, and check trip schedules. Implemented local currency display and payment integration with Paystack and Flutterwave.",
+          "Created reusable UI component systems and implemented form validation, state caching, and API error handling",
       },
       {
         title:
-          "Improved Payment & Financial Management: Integrated local payment gateways for both passenger booking and agent commission payouts.Implemented wallet system for agents to track referral earnings and request withdrawals.",
+          "Developed the admin dashboard to manage drivers, trips, finances, and users.",
       },
+    ],
+
+    impact: [
       {
         title:
-          "Optimized for Scalability & Performance: Leveraged Next.js SSR and SSG for faster page loading and better SEO. Built a clean UI with Tailwind CSS for a smooth user experience across devices. ",
+          "Enabled launch of Nigeria’s first multi-role bus booking platform with 5,000+ monthly active users.",
       },
       {
-        title:
-          "Monitored website performance metrics using tools such as Google Analytics and Pingdom.",
-      },
-      {
-        title:
-          "Utilized version control systems to manage project source codes efficiently.",
+        title: "Reduced booking time from 15 mins (manual) to under 1 minute.",
       },
     ],
   },
 
   {
     slug: "fiatplug-case-study",
-    title: "Fiatplug",
+    role: "Frontend Engineer",
+    title: "Fiatplug – Fintech Admin Dashboard",
     siteurl: "https://www.fiatplug.com",
     proimg: [
       { url: "/fiatplug1.png" },
@@ -162,8 +169,7 @@ export const projects = [
       { url: "/fiatplug4.png" },
       { url: "/fiatplug3.png" },
     ],
-    achivement:
-      "Key Achievement on Fiatplug - Gift Card & Cryptocurrency Platform:",
+    achivement: "What I Did:",
     stack: [
       "Next.js",
       "Shadcn",
@@ -179,31 +185,23 @@ export const projects = [
     tasks: [
       {
         title:
-          " Gift Card Management System: Developed a system that allows admins to manage gift card listings, track sales, and handle customer requests.",
+          "Designed and implemented interfaces for gift card sales, crypto transactions, and support ticket handling.",
       },
       {
         title:
-          "Cryptocurrency Integration: Built a feature for managing crypto transactions and tracking wallet balances.",
+          "Built and maintained the landing page and helped with design iterations using Figma files.",
       },
       {
-        title:
-          "Live Chat Integration: Enabled real-time communication between customers and support teams for smooth issue resolution.",
+        title: "Integrated user management and customer support chat features.",
+      },
+    ],
+
+    impact: [
+      {
+        title: "Supported onboarding of 1,000+ users in the first month.",
       },
       {
-        title:
-          "Analytics Dashboard: Provided insights on user activity, sales performance, and customer engagement.",
-      },
-      {
-        title:
-          "Responsive and User-Friendly Design: Built a clean and engaging landing page with Tailwind CSS to attract users and increase conversion rates. ",
-      },
-      {
-        title:
-          "SEO Optimization: Leveraged Next.js Server-Side Rendering (SSR) and Static Site Generation (SSG) for faster page loads and improved SEO.",
-      },
-      {
-        title:
-          "Used Redux Toolkit for state management, reducing re-renders and improving data handling.",
+        title: "Improved admin workflow by automating previously manual tasks.",
       },
     ],
   },

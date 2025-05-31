@@ -59,24 +59,51 @@ const IntroSection = () => {
       variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
     >
       <motion.h1
-        className="text-xl font-bold mb-4"
+        className="text-4xl font-bold mb-8"
         variants={fadeIn}
         custom={0}
       >
-        🧑‍💻Caleb Benjamin
+        Caleb Benjamin
+      </motion.h1>
+      <motion.h1
+        className="text-xl font-bold mb-2"
+        variants={fadeIn}
+        custom={0}
+      >
+        🧑‍💻 Senior Frontend Engineer | React, TypeScript & Next.js Specialist.
       </motion.h1>
       <motion.p variants={fadeIn} custom={1}>
-        I&apos;m a frontend developer with 5+ years building scalable
-        applications and an optimist, passionate about optimization, business
-        goals, and, most importantly Startups and Founders. This led me to join{" "}
-        <a href="https://www.eachblock.xyz/" className="text-zinc-400">
-          Eachblock
-        </a>
-        , where I build MVP for non-technical founders and launch to market on
-        time.
+        I build fast, scalable, and elegant web apps. I’ve launched 5+ products
+        for startups across fintech, logistics, and SaaS turning MVPs into real
+        businesses.
       </motion.p>
 
-      <motion.div className="mt-8" variants={fadeIn} custom={2}>
+      <motion.div className="mt-10" variants={fadeIn} custom={2}>
+        <h2 className="font-bold text-3xl">👱‍♂️ About me</h2>
+        <motion.p variants={fadeIn} custom={1} className="mt-4">
+          I’m Caleb Benjamin, a Senior Frontend Engineer with 6+ years of
+          experience building scalable, user-first web applications using React,
+          TypeScript, and Next.js.
+        </motion.p>
+        <motion.p variants={fadeIn} custom={1} className="mt-4">
+          I’m the founder of EachBlock, a development studio where I’ve led MVP
+          builds and full-scale products for over a dozen startups across
+          Nigeria, Canada, the US, and Europe. I specialize in turning founder
+          ideas into polished, production-ready platforms.
+        </motion.p>
+        <motion.p variants={fadeIn} custom={1} className="mt-4">
+          I’ve mentored 20+ junior devs, collaborated directly with CTOs, and
+          shipped apps used by thousands in fintech, e-commerce, transport, and
+          SaaS. My approach balances clean UI/UX with performance optimization
+          and technical depth.
+        </motion.p>
+        <motion.p variants={fadeIn} custom={1} className="font-bold mt-4">
+          I’m currently open to frontend engineering roles or product-building
+          partnerships let’s build something powerful.
+        </motion.p>
+      </motion.div>
+
+      {/* <motion.div className="mt-8" variants={fadeIn} custom={2}>
         <h2 className="font-bold text-xl">My Stack</h2>
         <div className="flex flex-wrap gap-2 mt-4">
           {techStack?.map((stack, i) => (
@@ -90,9 +117,9 @@ const IntroSection = () => {
             </motion.span>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
 
-      <motion.div
+      {/* <motion.div
         className="mt-8 text-zinc-600"
         variants={fadeIn}
         custom={techStack.length + 3}
@@ -112,7 +139,7 @@ const IntroSection = () => {
             </motion.span>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
     </motion.section>
   );
 };

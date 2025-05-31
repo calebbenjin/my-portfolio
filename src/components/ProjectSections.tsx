@@ -20,8 +20,8 @@ const fadeIn = {
 
 const ProjectSections = () => {
   return (
-    <section className="my-10">
-      <h2 className="font-bold text-2xl mb-6">
+    <section className="mb-10 mt-20">
+      <h2 className="font-bold text-3xl mb-6">
         🟠 What I&apos;ve Built So Far
       </h2>
       <div className="space-y-20">
@@ -50,20 +50,44 @@ const ProjectSections = () => {
                 </div>
               ))}
             </div>
-            <h2 className="font-bold text-xl my-2">🔥{project?.title}</h2>
-            <p>{project?.summary}</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              Tech Stack:{" "}
+            <h2 className="font-bold text-xl my-2">{project?.title}</h2>
+            <div className="flex items-center space-x-2">
+              <span className="text-white">Role:</span>
+              <p className="text-lg font-bold">{project?.role}</p>
+            </div>
+            {/* <p>{project?.summary}</p> */}
+            <div className="mt-2 flex flex-wrap gap-2">
+              Tech:{" "}
               {project?.stack?.map((stack, i) => (
                 <p key={i} className="font-bold">
                   {stack}
                 </p>
               ))}
             </div>
-            <Accordion type="single" collapsible>
+            <div className=" mt-4">
+              <h1 className="border-none text-lg underline font-bold">
+                {project?.achivement}
+              </h1>
+              <ul className="list-disc space-y-2 mt-2 pl-4">
+                {project?.tasks?.map((task, i) => (
+                  <li key={i}>{task?.title}</li>
+                ))}
+              </ul>
+            </div>
+            <div className=" mt-4">
+              <h1 className="border-none text-lg underline font-bold">
+                Impact:
+              </h1>
+              <ul className="list-disc space-y-2 mt-2 pl-4">
+                {project?.impact?.map((task, i) => (
+                  <li key={i}>{task?.title}</li>
+                ))}
+              </ul>
+            </div>
+            {/* <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger className="border-none text-xl underline">
-                  See {project?.achivement}
+                  {project?.achivement}
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4 pl-4">
                   {project.tasks?.map((task, i) => (
@@ -71,8 +95,8 @@ const ProjectSections = () => {
                   ))}
                 </AccordionContent>
               </AccordionItem>
-            </Accordion>
-            <div className="flex space-x-10 pt-2">
+            </Accordion> */}
+            {/* <div className="flex space-x-10 pt-2">
               <Link href={`/case/${project.slug}`} className="flex">
                 <Button className="bg-white text-zinc-900 hover:bg-gray-400">
                   Frontend Case Study
@@ -87,7 +111,7 @@ const ProjectSections = () => {
                   View Website
                 </Button>
               </Link>
-            </div>
+            </div> */}
           </motion.div>
         ))}
       </div>
