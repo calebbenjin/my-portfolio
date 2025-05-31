@@ -1,14 +1,6 @@
 "use client";
 
 import React from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Button } from "./ui/button";
-import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/constant";
 import { motion } from "framer-motion";
@@ -84,18 +76,6 @@ const ProjectSections = () => {
                 ))}
               </ul>
             </div>
-            {/* <Accordion type="single" collapsible>
-              <AccordionItem value="item-1">
-                <AccordionTrigger className="border-none text-xl underline">
-                  {project?.achivement}
-                </AccordionTrigger>
-                <AccordionContent className="space-y-4 pl-4">
-                  {project.tasks?.map((task, i) => (
-                    <p key={i}>{task?.title}</p>
-                  ))}
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion> */}
             {/* <div className="flex space-x-10 pt-2">
               <Link href={`/case/${project.slug}`} className="flex">
                 <Button className="bg-white text-zinc-900 hover:bg-gray-400">

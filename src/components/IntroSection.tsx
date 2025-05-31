@@ -3,39 +3,39 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const techStack = [
-  { name: "JavaScript" },
-  { name: "TypeScript" },
-  { name: "React" },
-  { name: "Next.js" },
-  { name: "Redux Toolkit" },
-  { name: "React Hooks" },
-  { name: "Tailwind CSS" },
-  { name: "GraphQL" },
-  { name: "AWS S3" },
-  { name: "Git & GitHub" },
-  { name: "(CI/CD)" },
-  { name: "Performance" },
-  { name: "HTML5" },
-  { name: "CSS3" },
-  { name: "Styled Components" },
-  { name: "Web Accessibility" },
-  { name: "Agile" },
-  { name: "SSR" },
-  { name: "Integration Testing" },
-];
+// const techStack = [
+//   { name: "JavaScript" },
+//   { name: "TypeScript" },
+//   { name: "React" },
+//   { name: "Next.js" },
+//   { name: "Redux Toolkit" },
+//   { name: "React Hooks" },
+//   { name: "Tailwind CSS" },
+//   { name: "GraphQL" },
+//   { name: "AWS S3" },
+//   { name: "Git & GitHub" },
+//   { name: "(CI/CD)" },
+//   { name: "Performance" },
+//   { name: "HTML5" },
+//   { name: "CSS3" },
+//   { name: "Styled Components" },
+//   { name: "Web Accessibility" },
+//   { name: "Agile" },
+//   { name: "SSR" },
+//   { name: "Integration Testing" },
+// ];
 
-const learnStack = [
-  { name: "EVM-based blockchains" },
-  { name: "Solana" },
-  { name: "IPFS" },
-  { name: "Ceramic" },
-  { name: "Wagmi" },
-  { name: "Ethers" },
-  { name: "Web3js." },
-  { name: "Solidity" },
-  { name: "SVM" },
-];
+// const learnStack = [
+//   { name: "EVM-based blockchains" },
+//   { name: "Solana" },
+//   { name: "IPFS" },
+//   { name: "Ceramic" },
+//   { name: "Wagmi" },
+//   { name: "Ethers" },
+//   { name: "Web3js." },
+//   { name: "Solidity" },
+//   { name: "SVM" },
+// ];
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
