@@ -1,15 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { Geist, Exo_2 } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const geist = Exo_2({
   subsets: ["latin"],
 });
 
@@ -63,10 +57,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={geist.className}>
       <Analytics />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-800 text-zinc-100`}>
+      <body className={` antialiase bg-zinc-800 text-zinc-100`}>
         {children}
       </body>
     </html>
