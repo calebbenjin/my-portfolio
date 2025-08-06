@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import { Geist, Exo_2 } from "next/font/google";
+import { Exo_2 } from "next/font/google";
 
 const geist = Exo_2({
   subsets: ["latin"],
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Frontend developer, an optimist, passionate about optimization, Startups and Founders.",
   openGraph: {
     type: "website",
-    url: "https://calebbenjamin.vercel.app",
+    url: "https://www.calebbenjamin.com/",
     title: "Caleb Benjamin",
     description:
       "Frontend developer, an optimist, passionate about optimization, Startups and Founders.",

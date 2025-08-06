@@ -3,14 +3,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  PiAddressBookLight,
   PiGithubLogo,
-  PiTwitchLogo,
-  PiX,
   PiXLogo,
 } from "react-icons/pi";
 import { TfiEmail } from "react-icons/tfi";
 import { AiOutlineLinkedin } from "react-icons/ai";
+import Image from "next/image";
 
 const navLinks = [
   { name: "My Story", href: "/caleb-story" },
@@ -63,8 +61,14 @@ const HeroPage = () => {
     <section className="">
       <div className="grid md:grid-cols-5 grid-cols-1 md:gap-x-8 gap-y-6 mx-auto lg:w-10/12 w-11/12 md:pt-20 pt-10">
         <div className="col-span-2">
-          <div className="md:h-[80vh] h-[50vh] overflow-hidden w-full rounded-2xl shadow-lg">
-            <img src="/profile-img.png" alt="Hero" className="w-full h-auto" />
+          <div className="md:h-[80vh] h-[50vh] overflow-hidden w-full rounded-2xl shadow-lg relative">
+            <Image
+              src="/profile-img.jpeg"
+              width={500}
+              height={600}
+              alt="Hero"
+              className="w-full h-auto"
+            />
           </div>
         </div>
         <div className="col-span-3 relative flex flex-col items-center justify-between">
@@ -87,7 +91,7 @@ const HeroPage = () => {
               variants={fadeIn}
               custom={0}
             >
-              I'm a product engineer passionate about crafting meaningful
+              I&apos;m a product engineer passionate about crafting meaningful
               things.
             </motion.h1>
             <motion.h1
@@ -95,7 +99,7 @@ const HeroPage = () => {
               variants={fadeIn}
               custom={0}
             >
-              Things I'm really into:
+              Things I&apos;m really into:
             </motion.h1>
             <motion.section
               initial="hidden"
@@ -124,12 +128,12 @@ const HeroPage = () => {
               I describe myself as a Fullstack React Product Developer. I work
               across the entire stack in TypeScript (I know Nodejs(backend) but
               prefer React & ReactNative (frontend)), I collaborate with
-              product, talk to customers and do what's required for the product
-              to succeed.
+              product, talk to customers and do what&apos;s required for the
+              product to succeed.
             </motion.p>
             <motion.p variants={fadeIn} custom={1} className="mt-6">
               For the past 6+ years I have build fast, scalable, and elegant web
-              apps. I’ve launched 5+ products for startups across fintech,
+              apps. I&apos;ve launched 5+ products for startups across fintech,
               logistics, and SaaS turning MVPs into real businesses.
             </motion.p>
             <motion.h1
@@ -137,7 +141,7 @@ const HeroPage = () => {
               variants={fadeIn}
               custom={0}
             >
-              Let's connect:
+              Let&apos;s connect:
             </motion.h1>
             <div className="w-full flex flex-wrap gap-4 items-center">
               {socialLinks.map((link, index) => (
