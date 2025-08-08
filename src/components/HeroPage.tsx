@@ -132,10 +132,11 @@ const HeroPage = () => {
               what&apos;s required for the product to succeed.
             </motion.p>
             <motion.p variants={fadeIn} custom={1} className="mt-6">
-              For the past 6+ years I have work with founders, cto's, product
-              managers and lead teams to build fast, scalable, and elegant web
-              apps. I&apos;ve launched 5+ products for startups across fintech,
-              logistics, and SaaS turning MVPs into real businesses.
+              For the past 6+ years I have work with founders, cto&apos;s,
+              product managers and lead teams to build fast, scalable, and
+              elegant web apps. I&apos;ve launched 5+ products for startups
+              across fintech, logistics, and SaaS turning MVPs into real
+              businesses.
             </motion.p>
             <motion.h1
               className="text-xl font-semibold mb-2 mt-6"
