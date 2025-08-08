@@ -2,10 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  PiGithubLogo,
-  PiXLogo,
-} from "react-icons/pi";
+import { PiGithubLogo, PiXLogo } from "react-icons/pi";
 import { TfiEmail } from "react-icons/tfi";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import Image from "next/image";
@@ -15,8 +12,8 @@ const navLinks = [
   { name: "Projects", href: "/projects" },
   { name: "Blog", href: "https://blog.calebbenjamin.com/" },
   {
-    name: "Resume",
-    href: "https://docs.google.com/document/d/1qvTTISaTxDKUW28W3yrvFIP3QHlZpNW5T7kNXeRh-f0/edit?usp=sharing",
+    name: "Free Resources",
+    href: "/free-resources",
   },
 ];
 

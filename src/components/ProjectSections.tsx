@@ -12,11 +12,17 @@ const fadeIn = {
 
 const ProjectSections = () => {
   return (
-    <section className="mb-10 mt-20">
-      <h2 className="font-bold text-3xl mb-6">
-        🟠 What I&apos;ve Built So Far
+    <section className="mb-10 mt-10 md:w-6/12 w-full mx-auto">
+      <h2 className="font-bold md:text-5xl text-3xl mb-6">🟠</h2>
+      <h2 className="font-bold md:text-5xl text-3xl mb-6">
+        Startups I&apos;ve Led — Building Frontends that Drive Growth
       </h2>
-      <div className="space-y-20">
+      <p className="text-lg text-gray-200">
+        From MVP to scalable products, I partner with startups, CEOs, Product
+        managers, CTO to design, develop, and optimize high-performance
+        frontends that convert and delight user.
+      </p>
+      <div className="space-y-20 mt-20">
         {projects.map((project, i) => (
           <motion.div
             key={i}

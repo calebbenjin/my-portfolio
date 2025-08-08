@@ -1,9 +1,12 @@
-import React from 'react'
+import ProjectSections from "@/components/ProjectSections";
+import React from "react";
 
 const SideProject = () => {
   return (
-    <div>SideProject</div>
-  )
-}
+    <>
+      <ProjectSections />
+    </>
+  );
+};
 
-export default SideProject
+export default SideProject;
