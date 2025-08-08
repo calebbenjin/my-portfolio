@@ -144,7 +144,7 @@ const HeroPage = () => {
             >
               Let&apos;s connect:
             </motion.h1>
-            <div className="w-full flex flex-wrap gap-4 items-center">
+            <div className="w-full flex flex-wrap gap-4 items-center md:mb-1 mb-10">
               {socialLinks.map((link, index) => (
                 <motion.a
                   key={index}
@@ -159,12 +159,12 @@ const HeroPage = () => {
               ))}
             </div>
           </motion.section>
-          <nav className="bg-zinc-80 border border-zinc-600 w-full py-3 md:px-6 px-3 rounded-full flex md:gap-0 gap-y-5 flex-wrap justify-between items-center md:my-0 my-6 shadow-md shadow-accent-foreground">
+          <nav className="bg-zinc-80 border border-zinc-600 w-full py-3 md:px-6 px-2 rounded-full flex md:gap-0 gap-y-5 flex-wrap justify-between items-start md:my-0 my-6 md:shadow-md shadow-accent-foreground">
             {navLinks.map((link, index) => (
               <motion.a
                 key={index}
                 href={link.href}
-                className="text-zinc-200 shadow-md shadow-accent-foreground text-center font-semibold hover:bg-zinc-700 border-zinc-600 border md:px-8 px-3 py-1 rounded-full transition-colors"
+                className="text-zinc-200 shadow-md shadow-accent-foreground text-center font-semibold hover:bg-zinc-700 border-zinc-600 border md:px-8 px-3 py-1 rounded-full transition-colors md:text-base text-xs"
                 variants={fadeIn}
                 custom={index + 1}
               >
