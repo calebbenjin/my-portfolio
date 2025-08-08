@@ -8,9 +8,9 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import Image from "next/image";
 
 const navLinks = [
-  { name: "My Story", href: "/caleb-story" },
   { name: "Projects", href: "/projects" },
   { name: "Blog", href: "https://blog.calebbenjamin.com/" },
+  { name: "My Journey", href: "/caleb-story" },
   {
     name: "Free Resources",
     href: "/free-resources",
@@ -88,8 +88,8 @@ const HeroPage = () => {
               variants={fadeIn}
               custom={0}
             >
-              I&apos;m a product engineer passionate about crafting meaningful
-              things.
+              I&apos;m a product engineer passionate about crafting
+              high-performance products.
             </motion.h1>
             <motion.h1
               className="text-xl font-semibold mb-2"
@@ -120,16 +120,20 @@ const HeroPage = () => {
               <div className="border border-zinc-600 rounded-full text-center px-2 py-1 font-bold text-sm whitespace-nowrap cursor-pointer hover:bg-gray-200 transition-colors hover:text-zinc-800">
                 Web Performance
               </div>
+              <div className="border border-zinc-600 rounded-full text-center px-2 py-1 font-bold text-sm whitespace-nowrap cursor-pointer hover:bg-gray-200 transition-colors hover:text-zinc-800">
+                SEO
+              </div>
             </motion.section>
             <motion.p variants={fadeIn} custom={1} className="mt-6">
-              I describe myself as a Fullstack React Product Developer. I work
-              across the entire stack in TypeScript (I know Nodejs(backend) but
-              prefer React & ReactNative (frontend)), I collaborate with
-              product, talk to customers and do what&apos;s required for the
-              product to succeed.
+              I describe myself as a Fullstack Frontend Product Developer. I
+              work across the entire stack from Web to Mobile using React and
+              TypeScript (I know Nodejs[backend] but prefer React & ReactNative
+              [frontend]), I collaborate with product, talk to customers and do
+              what&apos;s required for the product to succeed.
             </motion.p>
             <motion.p variants={fadeIn} custom={1} className="mt-6">
-              For the past 6+ years I have build fast, scalable, and elegant web
+              For the past 6+ years I have work with founders, cto's, product
+              managers and lead teams to build fast, scalable, and elegant web
               apps. I&apos;ve launched 5+ products for startups across fintech,
               logistics, and SaaS turning MVPs into real businesses.
             </motion.p>

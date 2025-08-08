@@ -17,7 +17,7 @@ const fadeIn = {
   }),
 };
 
-const FounderJourney = () => {
+const FreePage = () => {
   return (
     <div className="h-screen flex items-center justify-center">
       <div className="text-center">
@@ -26,11 +26,11 @@ const FounderJourney = () => {
           variants={fadeIn}
           custom={0}
         >
-          My Journey
+          Free Resources
         </motion.h1>
         <p className="mb-6">
-          Coming soon! Still crafting my story as a founder and product
-          engineer.
+          Coming soon! Stay tuned for free resources to help you on your
+          journey.
         </p>
         <Link href="/" className="inline-block">
           <Button>Go Back</Button>
@@ -40,4 +40,4 @@ const FounderJourney = () => {
   );
 };
 
-export default FounderJourney;
+export default FreePage;
