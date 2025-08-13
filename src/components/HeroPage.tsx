@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { PiGithubLogo, PiXLogo } from "react-icons/pi";
 import { TfiEmail } from "react-icons/tfi";
@@ -53,13 +53,7 @@ const fadeIn = {
   }),
 };
 
-const data = [{ isActive: true }];
-
 const HeroPage = () => {
-  const filteredData = useMemo(() => {
-    return data.filter((item) => item.isActive);
-  }, [data]);
-
   return (
     <section className="">
       <div className="grid md:grid-cols-5 grid-cols-1 md:gap-x-8 gap-y-6 mx-auto lg:w-10/12 w-11/12 md:pt-20 pt-6">
@@ -124,9 +118,9 @@ const HeroPage = () => {
               high-performance products.
             </motion.h1>
             <motion.p className="text-sm font-bold italic text-gray-200 mb-6">
-              "I help teams build world-class products with the React ecosystem
-              — from web to mobile — while sharing real-world lessons from the
-              engineering trenches".
+              &quot;I help teams build world-class products with the React
+              ecosystem — from web to mobile — while sharing real-world lessons
+              from the engineering trenches&ldquo;.
             </motion.p>
             <motion.h1
               className="text-xl font-semibold mb-2"
