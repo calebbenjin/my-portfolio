@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import { PiGithubLogo, PiXLogo } from "react-icons/pi";
 import { TfiEmail } from "react-icons/tfi";
@@ -53,11 +53,30 @@ const fadeIn = {
   }),
 };
 
+const data = [{ isActive: true }];
+
 const HeroPage = () => {
+  const filteredData = useMemo(() => {
+    return data.filter((item) => item.isActive);
+  }, [data]);
+
   return (
     <section className="">
-      <div className="grid md:grid-cols-5 grid-cols-1 md:gap-x-8 gap-y-6 mx-auto lg:w-10/12 w-11/12 md:pt-20 pt-10">
-        <div className="col-span-2">
+      <div className="grid md:grid-cols-5 grid-cols-1 md:gap-x-8 gap-y-6 mx-auto lg:w-10/12 w-11/12 md:pt-20 pt-6">
+        <div className="col-span-2 relative">
+          <nav className=" sticky top-2 z-50 bg-zinc-800 border border-zinc-600 w-full py-3 md:px-6 px-2 rounded-full md:hidden flex md:gap-0 gap-y-5 flex-wrap justify-between items-start mb-4 md:shadow-md shadow-accent-foreground">
+            {navLinks.map((link, index) => (
+              <motion.a
+                key={index}
+                href={link.href}
+                className="text-zinc-200 shadow-md shadow-accent-foreground text-center font-semibold hover:bg-zinc-700 border-zinc-600 border md:px-8 px-3 py-1 rounded-full transition-colors md:text-base text-xs"
+                variants={fadeIn}
+                custom={index + 1}
+              >
+                {link.name}
+              </motion.a>
+            ))}
+          </nav>
           <div className="md:h-[80vh] h-[50vh] overflow-hidden w-full rounded-2xl shadow-lg relative">
             <Image
               src="/profile-img.jpeg"
@@ -69,6 +88,19 @@ const HeroPage = () => {
           </div>
         </div>
         <div className="col-span-3 relative flex flex-col items-center justify-between">
+          <nav className="bg-zinc-80 border border-zinc-600 w-full py-3 md:px-6 px-2 rounded-full hidden md:flex md:gap-0 gap-y-5 flex-wrap justify-between items-start mb-4 md:shadow-md shadow-accent-foreground">
+            {navLinks.map((link, index) => (
+              <motion.a
+                key={index}
+                href={link.href}
+                className="text-zinc-200 shadow-md shadow-accent-foreground text-center font-semibold hover:bg-zinc-700 border-zinc-600 border md:px-8 px-3 py-1 rounded-full transition-colors md:text-base text-xs"
+                variants={fadeIn}
+                custom={index + 1}
+              >
+                {link.name}
+              </motion.a>
+            ))}
+          </nav>
           <motion.section
             className=""
             initial="hidden"
@@ -91,6 +123,11 @@ const HeroPage = () => {
               I&apos;m a product engineer passionate about crafting
               high-performance products.
             </motion.h1>
+            <motion.p className="text-sm font-bold italic text-gray-200 mb-6">
+              "I help teams build world-class products with the React ecosystem
+              — from web to mobile — while sharing real-world lessons from the
+              engineering trenches".
+            </motion.p>
             <motion.h1
               className="text-xl font-semibold mb-2"
               variants={fadeIn}
@@ -131,13 +168,14 @@ const HeroPage = () => {
               [frontend]), I collaborate with product, talk to customers and do
               what&apos;s required for the product to succeed.
             </motion.p>
-            <motion.p variants={fadeIn} custom={1} className="mt-6">
+            <motion.p variants={fadeIn} custom={1} className="mt-2">
               For the past 6+ years I have work with founders, cto&apos;s,
               product managers and lead teams to build fast, scalable, and
               elegant web apps. I&apos;ve launched 5+ products for startups
               across fintech, logistics, and SaaS turning MVPs into real
               businesses.
             </motion.p>
+
             <motion.h1
               className="text-xl font-semibold mb-2 mt-6"
               variants={fadeIn}
@@ -160,19 +198,6 @@ const HeroPage = () => {
               ))}
             </div>
           </motion.section>
-          <nav className="bg-zinc-80 border border-zinc-600 w-full py-3 md:px-6 px-2 rounded-full flex md:gap-0 gap-y-5 flex-wrap justify-between items-start md:my-0 my-6 md:shadow-md shadow-accent-foreground">
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={index}
-                href={link.href}
-                className="text-zinc-200 shadow-md shadow-accent-foreground text-center font-semibold hover:bg-zinc-700 border-zinc-600 border md:px-8 px-3 py-1 rounded-full transition-colors md:text-base text-xs"
-                variants={fadeIn}
-                custom={index + 1}
-              >
-                {link.name}
-              </motion.a>
-            ))}
-          </nav>
         </div>
       </div>
     </section>
