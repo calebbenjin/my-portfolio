@@ -26,11 +26,12 @@ const FreePage = () => {
           variants={fadeIn}
           custom={0}
         >
-          Free Resources
+          My Startups
         </motion.h1>
-        <p className="mb-6">
-          Coming soon! Stay tuned for free resources to help you on your
-          journey.
+        <p className="mb-6 text-lg text-gray-300 md:w-6/12 w-11/12 mx-auto">
+          I believe startups can change the world. This page is where I’ll share
+          the companies I’m building, the problems I’m solving, and the vision
+          driving each project.
         </p>
         <Link href="/" className="inline-block">
           <Button>Go Back</Button>

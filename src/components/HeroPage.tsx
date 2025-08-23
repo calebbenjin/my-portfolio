@@ -12,8 +12,8 @@ const navLinks = [
   { name: "Blog", href: "https://blog.calebbenjamin.com/" },
   { name: "My Journey", href: "/caleb-story" },
   {
-    name: "Free Resources",
-    href: "/free-resources",
+    name: "My Startups",
+    href: "/my-startups",
   },
 ];
 
@@ -112,17 +112,21 @@ const HeroPage = () => {
             <motion.h1
               className="text-xl font-meduim mb-6"
               variants={fadeIn}
-              custom={0}
+              custom={1}
             >
-              I&apos;m a product engineer passionate about crafting
-              high-performance products.
+              I&apos;m a product engineer and techpreneur passionate about
+              building meaningful products.
             </motion.h1>
-            <motion.p className="text-sm font-bold italic text-gray-200 mb-6">
-              &quot;I help teams build world-class products with the React
-              ecosystem — from web to mobile — while sharing real-world lessons
-              from the engineering trenches&ldquo;.
+            <motion.p
+              variants={fadeIn}
+              custom={0}
+              className="text-sm font-bold italic text-gray-200 mb-6"
+            >
+              &quot;I help teams and founders build high-performance
+              user-centered products across the full product lifecycle from web
+              to mobile with a focus on outcomes, not just output.&ldquo;.
             </motion.p>
-            <motion.h1
+            {/* <motion.h1
               className="text-xl font-semibold mb-2"
               variants={fadeIn}
               custom={0}
@@ -154,13 +158,15 @@ const HeroPage = () => {
               <div className="border border-zinc-600 rounded-full text-center px-2 py-1 font-bold text-sm whitespace-nowrap cursor-pointer hover:bg-gray-200 transition-colors hover:text-zinc-800">
                 SEO
               </div>
-            </motion.section>
+            </motion.section> */}
             <motion.p variants={fadeIn} custom={1} className="mt-6">
-              I describe myself as a Fullstack Frontend Product Developer. I
-              work across the entire stack from Web to Mobile using React and
-              TypeScript (I know Nodejs[backend] but prefer React & ReactNative
-              [frontend]), I collaborate with product, talk to customers and do
-              what&apos;s required for the product to succeed.
+              I describe myself as a Product Engineer because I do more than
+              just write code. With 7 years of experience in engineering, I
+              focus on understanding product vision, user experience, and
+              business goals to ensure every feature drives impact. I think
+              deeply about how features influence users, growth, and long-term
+              scalability, and I work closely with designers, product managers,
+              and founders to ship products people love to use.
             </motion.p>
             <motion.p variants={fadeIn} custom={1} className="mt-2">
               For the past 6+ years I have work with founders, cto&apos;s,
@@ -171,11 +177,13 @@ const HeroPage = () => {
             </motion.p>
 
             <motion.h1
-              className="text-xl font-semibold mb-2 mt-6"
+              className="text-base font-semibold mb-4 mt-6"
               variants={fadeIn}
               custom={0}
             >
-              Let&apos;s connect:
+              🚀 Let&apos;s connect! I&apos;m always open to collaborating with
+              founders, teams, and innovators who want to bring new ideas to
+              market or scale existing products.
             </motion.h1>
             <div className="w-full flex flex-wrap gap-4 items-center md:mb-1 mb-10">
               {socialLinks.map((link, index) => (
