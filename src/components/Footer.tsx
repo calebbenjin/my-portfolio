@@ -1,22 +1,15 @@
-
 import React from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className=" text-white py-10 mt-20">
-      <div className="flex justify-center items-center">
-        <p className="text-sm text-zinc-400">
-          Built with{" "}
-          <span role="img" aria-label="love" className="text-red-500">
-            ❤️
-          </span>{" "}
-          by Caleb Benjamin
+    <footer className="py-10 mt-20 border-t border-zinc-200 dark:border-zinc-800/60">
+      <div className="flex items-center justify-between">
+        <p className="text-xs text-zinc-400 dark:text-zinc-700">
+          © {currentYear} Caleb Benjamin
         </p>
-      </div>
-      <div className="flex justify-center items-center mt-4">
-        <p className="text-sm text-zinc-400">
-          © {currentYear} Caleb Benjamin. All rights reserved.
+        <p className="text-xs text-zinc-400 dark:text-zinc-700">
+          Built with Next.js & Tailwind CSS
         </p>
       </div>
     </footer>

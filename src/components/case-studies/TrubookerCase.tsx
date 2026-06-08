@@ -1,162 +1,145 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { Button } from "../ui/button";
-
-const covers = [
-  { url: "/trubooker1.png" },
-  { url: "/trubooker2.png" },
-  { url: "/trubooker4.png" },
-  { url: "/trubooker3.png" },
-];
-
-const techStack = [
-  { name: "TypeScript" },
-  { name: "Next.js" },
-  { name: "Redux Toolkit" },
-  { name: "React Hooks" },
-  { name: "Tailwind CSS" },
-  { name: "Git & GitHub" },
-  { name: "(CI/CD)" },
-  { name: "Performance" },
-  { name: "HTML5" },
-  { name: "CSS3" },
-  { name: "Web Accessibility" },
-  { name: "Agile" },
-  { name: "SSR" },
-  { name: "Integration Testing" },
-  { name: "React Chart" },
-  { name: "PayStack API" },
-  { name: "Google Map API Integration" },
-];
+import CaseStudyWrapper, {
+  CaseSection,
+  FeatureBlock,
+  ArchBox,
+  MetricRow,
+  ImpactList,
+  StackTags,
+  ImageGrid,
+} from "../CaseStudyWrapper";
 
 const TrubookerCase = () => {
   return (
-    <div className="lg:pt-20 pt-10">
-      <section className="mx-auto lg:w-10/12 w-11/12 ">
-        <h2 className="font-bold lg:text-5xl text-2xl text-center">
-          Frontend Case Study: <br /> TruBooker - Transport Management Platform
-        </h2>
-        <div className="grid grid-cols-2 lg:gap-6 gap-2 mx-auto lg:w-6/12 w-12/12 space-x-3 mt-8">
-          {covers?.map((image, i) => (
-            <Image
-              key={i}
-              src={`${image.url}`}
-              alt="project-image"
-              width={350}
-              height={400}
-              className="rounded-lg"
-            />
-          ))}
-        </div>
-      </section>
+    <CaseStudyWrapper
+      category="Transport & Mobility"
+      title="TruBooker"
+      subtitle="Multi-Role Transport Booking Platform"
+      role="Frontend Engineer"
+      siteUrl="https://www.trubooker.com"
+      siteLabel="Visit TruBooker"
+    >
+      <ImageGrid
+        images={[
+          { url: "/trubooker1.png", alt: "TruBooker passenger app" },
+          { url: "/trubooker2.png", alt: "TruBooker driver dashboard" },
+        ]}
+      />
+      <ImageGrid
+        images={[
+          { url: "/trubooker4.png", alt: "TruBooker admin panel" },
+          { url: "/trubooker3.png", alt: "TruBooker agent portal" },
+        ]}
+      />
 
-      <section className="mx-auto lg:w-6/12 w-11/12 my-8">
-        <h2 className="font-bold text-2xl">Project Overview</h2>
-        <p className="mt-4 text-base">
-          TruBooker is a transport management platform that allows drivers and
-          public corporations to list vehicles, sell tickets, and manage
-          schedules. The platform also enables agents to earn through referrals
-          and passengers to book tickets with ease. My role as the Frontend
-          Engineer focused on building the Admin Dashboard, Agent Web App, and
-          the Landing Page.
+      <CaseSection label="Overview">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          TruBooker is Nigeria&apos;s first multi-role transport management
+          platform — allowing bus corporations and independent drivers to list
+          vehicles, sell tickets, and manage schedules, while agents earn
+          through referrals and passengers book journeys in under a minute. I
+          architected and built four separate application surfaces under a
+          single unified design system.
         </p>
-        <h2 className="font-bold text-2xl mt-8">My Contribution</h2>
-        <h2 className="font-semibold text-xl mt-2">Tech Stack:</h2>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {techStack?.map((stack, i) => (
-            <span className="text-sm border rounded-lg px-2 py-1" key={i}>
-              {stack.name}
-            </span>
-          ))}
-        </div>
-        <h2 className="font-semibold text-2xl mt-8">🧑‍💻Key Features I Built</h2>
-        <p className="text-xl mt-4">1. Admin Dashboard</p>
-        <ul className="space-y-2 mt-4 lg:pl-8">
-          <li>
-            ⚪ Real-time Driver & Trip Management: Integrated live tracking
-            functionality using Google Map API to allow admins to monitor driver
-            movement and trip progress in real-time.
-          </li>
-          <li>
-            ⚪ Revenue Tracking: Built a system to monitor total revenue from
-            ticket sales and agent commissions.
-          </li>
-          <li>
-            ⚪ Driver Performance Management: This enabled admins to track
-            driver performance and trip history.
-          </li>
-        </ul>
-        <p className="text-xl mt-4">2. Agent Web App</p>
-        <ul className="space-y-2 mt-4 lg:pl-8">
-          <li>
-            ⚪ Referral Management System: Built a referral system that allows
-            agents to invite passengers and earn commissions on each successful
-            booking.
-          </li>
-          <li>
-            ⚪ Wallet System: Integrated agent wallet management, allowing
-            agents to receive earnings and request withdrawals to their bank
-            accounts.
-          </li>
-          <li>
-            ⚪ Earnings Dashboard: This enabled agents to track their revenue,
-            referrals, and commission history.
-          </li>
-        </ul>
+      </CaseSection>
 
-        <p className="text-xl mt-4">3. Landing Page</p>
-        <ul className="space-y-2 mt-4 lg:pl-8">
-          <li>
-            ⚪ Responsive and High-Converting Design: Built a fast and
-            user-friendly landing page with Tailwind CSS to allow passengers to
-            book tickets and view available routes.
-          </li>
-          <li>
-            ⚪ Local Currency Support: Integrated Paystack API for seamless
-            payments in local currency.
-          </li>
-        </ul>
+      <CaseSection label="The Challenge">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed border-l-2 border-zinc-200 dark:border-zinc-700 pl-4 italic">
+          Architecting a multi-role transport platform serving four distinct
+          user types — passengers, drivers, agents, and admins — each with
+          separate application surfaces, GPS-integrated workflows, and
+          real-time scheduling under a unified design system.
+        </p>
+        <ArchBox note="Multi-app role architecture · GPS real-time tracking · Shared component system · Optimistic state updates · Referral earnings engine · API error boundary handling" />
+      </CaseSection>
 
-        <p className="font-semibold text-xl mt-4">Performance Optimization</p>
-        <ul className="space-y-2 mt-4 lg:pl-8">
-          <li>
-            ⚪ Leveraged Next.js Server-Side Rendering (SSR) and Static Site
-            Generation (SSG) for faster page load times and improved SEO.
-          </li>
-          <li>
-            ⚪ Used Redux Toolkit for efficient state management, reducing
-            unnecessary re-renders and improving data flow.
-          </li>
-        </ul>
-        <p className="font-semibold text-2xl mt-4">Business Impact</p>
-        <ul className="space-y-2 mt-4 lg:pl-8">
-          <li>
-            ✅ Improved admin efficiency in managing trips, drivers, and
-            revenue.
-          </li>
-          <li>
-            ✅ Increased agent engagement with the referral and earnings
-            tracking system
-          </li>
-          <li>
-            ✅ Boosted passenger satisfaction with a seamless booking experience
-            and local payment support.
-          </li>
-          <li>
-            ✅ Enhanced platform performance and SEO through Next.js
-            optimization.
-          </li>
-        </ul>
-        <div className=" pt-4">
-          <Link target="_blank" href="https://trubooker.com" className="flex">
-            <Button className="bg-white text-zinc-900 hover:bg-gray-400">
-              View Trubooker Website
-            </Button>
-          </Link>
-        </div>
-      </section>
-    </div>
+      <CaseSection label="What I Built">
+        <FeatureBlock
+          number="01"
+          title="Admin Dashboard"
+          items={[
+            "Built real-time driver and trip management with live GPS tracking via Google Maps API.",
+            "Developed revenue tracking across ticket sales, agent commissions, and corporate accounts.",
+            "Implemented driver performance management — trip history, ratings, and incident logging.",
+            "Created user management tools to handle passengers, agents, drivers, and corporate accounts.",
+          ]}
+        />
+        <FeatureBlock
+          number="02"
+          title="Agent Web App"
+          items={[
+            "Built a referral system allowing agents to invite passengers and earn commissions per booking.",
+            "Integrated agent wallet management — earnings accumulation and bank withdrawal requests.",
+            "Created an earnings dashboard tracking revenue, referral history, and commission breakdowns.",
+          ]}
+        />
+        <FeatureBlock
+          number="03"
+          title="Passenger Booking App"
+          items={[
+            "Built a mobile-first ticket booking flow — route search, seat selection, and payment in under 60 seconds.",
+            "Integrated Paystack for local currency (NGN) payments with a smooth checkout experience.",
+            "Implemented trip history, e-ticket generation, and boarding pass display.",
+          ]}
+        />
+        <FeatureBlock
+          number="04"
+          title="Shared Component System"
+          items={[
+            "Designed a reusable UI component library shared across all four app surfaces.",
+            "Implemented form validation, state caching, and API error boundary handling globally.",
+            "Built a consistent design token system — spacing, typography, and colour — applied across apps.",
+          ]}
+        />
+      </CaseSection>
+
+      <CaseSection label="Performance Optimisation">
+        <ImpactList
+          items={[
+            "Leveraged Next.js SSR and SSG for landing pages and marketing surfaces.",
+            "Used Redux Toolkit with RTK Query for efficient server-state management and cache invalidation.",
+            "Implemented optimistic UI updates on booking actions to eliminate perceived latency.",
+            "Lazy-loaded Google Maps and GPS-dependent modules to keep initial bundle lean.",
+          ]}
+        />
+      </CaseSection>
+
+      <CaseSection label="Business Impact">
+        <MetricRow
+          metrics={[
+            { value: "5,000+", label: "monthly active users" },
+            { value: "<1 min", label: "avg booking time" },
+            { value: "4", label: "distinct app surfaces" },
+          ]}
+        />
+        <ImpactList
+          items={[
+            "Enabled launch of Nigeria's first multi-role bus booking platform.",
+            "Reduced booking time from 15 minutes (manual ticketing) to under 1 minute.",
+            "Boosted passenger satisfaction with a seamless, local-currency booking experience.",
+            "Increased agent engagement through the referral and earnings tracking system.",
+          ]}
+        />
+      </CaseSection>
+
+      <CaseSection label="Tech Stack">
+        <StackTags
+          tags={[
+            "Next.js",
+            "TypeScript",
+            "Redux Toolkit",
+            "RTK Query",
+            "Google Maps API",
+            "Paystack API",
+            "Shadcn UI",
+            "Tailwind CSS",
+            "Framer Motion",
+            "SSR / SSG",
+            "CI/CD",
+          ]}
+        />
+      </CaseSection>
+    </CaseStudyWrapper>
   );
 };
 

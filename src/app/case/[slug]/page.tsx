@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import AquatrackCase from "@/components/case-studies/AquatrackCase";
 import FiatplugCase from "@/components/case-studies/FiatplugCase";
+import PredictHubCase from "@/components/case-studies/PredictHubCase";
 import TrubookerCase from "@/components/case-studies/TrubookerCase";
+import XervicesCase from "@/components/case-studies/XervicesCase";
 import YeaCaseStudy from "@/components/case-studies/YeaCaseStudy";
 import React from "react";
 
@@ -9,10 +11,12 @@ async function CasePage({ params }: { params: any }) {
   const { slug } = await params;
   return (
     <div>
-      {slug == "yogaexperience-africa-case-study" && <YeaCaseStudy />}
-      {slug == "fiatplug-case-study" && <FiatplugCase />}
-      {slug == "trubooker-case-study" && <TrubookerCase />}
-      {slug == "aquatrack-case-study" && <AquatrackCase />}
+      {slug === "yogaexperience-africa-case-study" && <YeaCaseStudy />}
+      {slug === "fiatplug-case-study" && <FiatplugCase />}
+      {slug === "trubooker-case-study" && <TrubookerCase />}
+      {slug === "aquatrack-case-study" && <AquatrackCase />}
+      {slug === "predicthub-case-study" && <PredictHubCase />}
+      {slug === "xervices-case-study" && <XervicesCase />}
     </div>
   );
 }

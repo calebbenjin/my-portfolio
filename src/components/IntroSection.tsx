@@ -3,143 +3,174 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// const techStack = [
-//   { name: "JavaScript" },
-//   { name: "TypeScript" },
-//   { name: "React" },
-//   { name: "Next.js" },
-//   { name: "Redux Toolkit" },
-//   { name: "React Hooks" },
-//   { name: "Tailwind CSS" },
-//   { name: "GraphQL" },
-//   { name: "AWS S3" },
-//   { name: "Git & GitHub" },
-//   { name: "(CI/CD)" },
-//   { name: "Performance" },
-//   { name: "HTML5" },
-//   { name: "CSS3" },
-//   { name: "Styled Components" },
-//   { name: "Web Accessibility" },
-//   { name: "Agile" },
-//   { name: "SSR" },
-//   { name: "Integration Testing" },
-// ];
-
-// const learnStack = [
-//   { name: "EVM-based blockchains" },
-//   { name: "Solana" },
-//   { name: "IPFS" },
-//   { name: "Ceramic" },
-//   { name: "Wagmi" },
-//   { name: "Ethers" },
-//   { name: "Web3js." },
-//   { name: "Solidity" },
-//   { name: "SVM" },
-// ];
-
 const fadeIn = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      delay: i * 0.05,
-      duration: 0.4,
-    },
+    transition: { delay: i * 0.06, duration: 0.5, ease: "easeOut" },
   }),
 };
+
+const competencies = [
+  {
+    area: "Architecture",
+    detail:
+      "SSR/SSG hybrid rendering, micro-frontend patterns, multi-role RBAC systems, scalable state management",
+  },
+  {
+    area: "Performance",
+    detail:
+      "Core Web Vitals, code splitting, lazy loading, server-side caching, sub-1.5s load targets",
+  },
+  {
+    area: "Product Thinking",
+    detail:
+      "MVP to production, Figma-to-code, founder collaboration, user-first decision making at speed",
+  },
+  {
+    area: "Integrations",
+    detail:
+      "REST APIs, Firebase real-time sync, payment gateways, geolocation APIs, GPS tracking systems",
+  },
+];
+
+const aiTools = [
+  {
+    category: "Development",
+    tools: [
+      {
+        name: "Claude (Anthropic)",
+        desc: "Architecture decisions, deep code review, complex debugging, and technical writing",
+      },
+      {
+        name: "ChatGPT / GPT-4",
+        desc: "Documentation drafting, edge-case exploration, and API design brainstorming",
+      },
+    ],
+  },
+
+  {
+    category: "Production AI",
+    tools: [
+      {
+        name: "Vercel AI SDK",
+        desc: "Streaming AI responses, multi-step agents, and AI-powered UI features",
+      },
+      {
+        name: "Claude API",
+        desc: "Embedding AI reasoning into product features — summarisation, classification, Q&A",
+      },
+    ],
+  },
+];
 
 const IntroSection = () => {
   return (
     <motion.section
-      className="mt-6"
+      className="mt-14 pt-10 border-t border-zinc-200 dark:border-zinc-800/60"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
-      variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
+      viewport={{ once: true, amount: 0.15 }}
+      variants={{ visible: { transition: { staggerChildren: 0.07 } } }}
     >
-      <motion.h1
-        className="text-4xl font-bold mb-8"
+      {/* Headline */}
+      <motion.p
+        className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 leading-snug"
         variants={fadeIn}
         custom={0}
       >
-        Caleb Benjamin
-      </motion.h1>
-      <motion.h1
-        className="text-xl font-bold mb-2"
-        variants={fadeIn}
-        custom={0}
-      >
-        🧑‍💻 Senior Frontend Engineer | React, TypeScript & Next.js Specialist.
-      </motion.h1>
-      <motion.p variants={fadeIn} custom={1}>
-        I build fast, scalable, and elegant web apps. I’ve launched 5+ products
-        for startups across fintech, logistics, and SaaS turning MVPs into real
-        businesses.
+        I architect fast, scalable interfaces that turn complex backend logic
+        into intuitive user experiences.
       </motion.p>
 
-      <motion.div className="mt-10" variants={fadeIn} custom={2}>
-        <h2 className="font-bold text-3xl">👱‍♂️ About me</h2>
-        <motion.p variants={fadeIn} custom={1} className="mt-4">
-          I’m Caleb Benjamin, a Senior Frontend Engineer with 6+ years of
-          experience building scalable, user-first web applications using React,
-          TypeScript, and Next.js.
-        </motion.p>
-        <motion.p variants={fadeIn} custom={1} className="mt-4">
-          I’m the founder of EachBlock, a development studio where I’ve led MVP
-          builds and full-scale products for over a dozen startups across
-          Nigeria, Canada, the US, and Europe. I specialize in turning founder
-          ideas into polished, production-ready platforms.
-        </motion.p>
-        <motion.p variants={fadeIn} custom={1} className="mt-4">
-          I’ve mentored 20+ junior devs, collaborated directly with CTOs, and
-          shipped apps used by thousands in fintech, e-commerce, transport, and
-          SaaS. My approach balances clean UI/UX with performance optimization
-          and technical depth.
-        </motion.p>
-        <motion.p variants={fadeIn} custom={1} className="font-bold mt-4">
-          I’m currently open to frontend engineering roles or product-building
-          partnerships let’s build something powerful.
-        </motion.p>
+      {/* Bio */}
+      <motion.div
+        className="mt-7 space-y-4 text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm"
+        variants={fadeIn}
+        custom={1}
+      >
+        <p>
+          Senior Frontend Engineer with 6+ years of experience shipping
+          production-grade applications across fintech, logistics, agritech, and
+          SaaS. I founded{" "}
+          <span className="text-zinc-900 dark:text-zinc-200 font-medium">
+            EachBlock
+          </span>
+          , a development studio where I&apos;ve led MVP builds and full-scale
+          products for startups across Nigeria, Canada, the US, and Europe.
+        </p>
+        <p>
+          I work directly with CTOs and founders to make fast, high-quality
+          architectural decisions — from choosing the right rendering strategy
+          to designing component systems that scale across multiple apps and
+          user roles.
+        </p>
+        <p>
+          I&apos;ve mentored 20+ engineers, shipped to 5,000+ concurrent users,
+          and consistently reduced frontend complexity while increasing delivery
+          speed.
+        </p>
       </motion.div>
 
-      {/* <motion.div className="mt-8" variants={fadeIn} custom={2}>
-        <h2 className="font-bold text-xl">My Stack</h2>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {techStack?.map((stack, i) => (
-            <motion.span
+      {/* Core Competencies */}
+      <motion.div className="mt-8" variants={fadeIn} custom={2}>
+        <p className="text-xs text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-4">
+          Core Competencies
+        </p>
+        <div className="grid grid-cols-2 gap-3">
+          {competencies.map((item, i) => (
+            <motion.div
               key={i}
-              className="text-sm border rounded-lg px-2 py-1"
+              className="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors duration-200"
               variants={fadeIn}
-              custom={i + 3}
+              custom={3 + i}
             >
-              {stack.name}
-            </motion.span>
+              <p className="text-xs text-zinc-400 dark:text-zinc-500 uppercase tracking-widest font-medium mb-1.5">
+                {item.area}
+              </p>
+              <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                {item.detail}
+              </p>
+            </motion.div>
           ))}
         </div>
-      </motion.div> */}
+      </motion.div>
 
-      {/* <motion.div
-        className="mt-8 text-zinc-600"
+      {/* AI Workflow */}
+      <motion.div
+        className="mt-10 pt-8 border-t border-zinc-200 dark:border-zinc-800/60"
         variants={fadeIn}
-        custom={techStack.length + 3}
+        custom={7}
       >
-        <h2 className="font-medium text-md text-zinc-400">
-          Currently Learning Web3 technologies including
-        </h2>
-        <div className="flex flex-wrap gap-2 mt-2">
-          {learnStack?.map((stack, i) => (
-            <motion.span
-              className="text-sm border border-zinc-600 rounded-lg px-2 py-1"
-              key={i}
-              variants={fadeIn}
-              custom={techStack.length + 4 + i}
-            >
-              {stack.name}
-            </motion.span>
+        <p className="text-xs text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-5">
+          AI-Augmented Workflow
+        </p>
+        <div className="space-y-6">
+          {aiTools.map((group, gi) => (
+            <div key={gi}>
+              <p className="text-xs font-medium text-zinc-500 dark:text-zinc-500 mb-3">
+                {group.category}
+              </p>
+              <div className="space-y-2">
+                {group.tools.map((tool, ti) => (
+                  <div
+                    key={ti}
+                    className="flex gap-3 px-3 py-2.5 rounded-lg bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-100 dark:border-zinc-800/80"
+                  >
+                    <span className="text-xs font-semibold text-zinc-800 dark:text-zinc-200 min-w-[160px] flex-shrink-0 pt-px">
+                      {tool.name}
+                    </span>
+                    <span className="text-xs text-zinc-500 dark:text-zinc-500 leading-relaxed">
+                      {tool.desc}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
-      </motion.div> */}
+      </motion.div>
     </motion.section>
   );
 };
