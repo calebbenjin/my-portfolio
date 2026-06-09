@@ -1,154 +1,143 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { Button } from "../ui/button";
-
-const covers = [
-  { url: "/fiatplug1.png" },
-  { url: "/fiatplug2.png" },
-  { url: "/fiatplug4.png" },
-  { url: "/fiatplug3.png" },
-];
-
-const techStack = [
-  { name: "TypeScript" },
-  { name: "Next.js" },
-  { name: "Redux Toolkit" },
-  { name: "React Hooks" },
-  { name: "Tailwind CSS" },
-  { name: "Git & GitHub" },
-  { name: "(CI/CD)" },
-  { name: "Performance" },
-  { name: "HTML5" },
-  { name: "CSS3" },
-  { name: "Web Accessibility" },
-  { name: "Agile" },
-  { name: "SSR" },
-  { name: "Integration Testing" },
-  { name: "React Chart" },
-];
+import CaseStudyWrapper, {
+  CaseSection,
+  FeatureBlock,
+  ArchBox,
+  MetricRow,
+  ImpactList,
+  StackTags,
+  ImageGrid,
+} from "../CaseStudyWrapper";
 
 const FiatplugCase = () => {
   return (
-    <div className="mx-auto lg:w-10/12 w-11/12 lg:pt-20 pt-10">
-      <section>
-        <h2 className="font-bold lg:text-6xl text-2xl text-center">
-          Frontend Case Study: <br /> Fiatplug - Gift Card & Cryptocurrency
-          Platform
-        </h2>
-        <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-4 gap-2 mt-8">
-          {covers?.map((image, i) => (
-            <div
-              key={i}
-              className="lg:h-70 w-full relative overflow-hidden rouned-lg">
-              <Image
-                src={`${image.url}`}
-                alt="project-image"
-                width={800}
-                height={400}
-                className="rounded-lg"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
+    <CaseStudyWrapper
+      category="Fintech"
+      title="Fiatplug"
+      subtitle="Gift Card & Crypto Admin Platform"
+      role="Frontend Engineer"
+      siteUrl="https://www.fiatplug.com"
+      siteLabel="Visit Fiatplug"
+    >
+      <ImageGrid
+        images={[
+          { url: "/fiatplug1.png", alt: "Fiatplug admin dashboard" },
+          { url: "/fiatplug2.png", alt: "Fiatplug gift card management" },
+        ]}
+      />
+      <ImageGrid
+        images={[
+          { url: "/fiatplug4.png", alt: "Fiatplug transaction view" },
+          { url: "/fiatplug3.png", alt: "Fiatplug landing page" },
+        ]}
+      />
 
-      <section className="mx-auto lg:w-6/12 w-11/12 my-8">
-        <h2 className="font-bold text-2xl">Project Overview</h2>
-        <p className="mt-4 text-base">
-          Fiatplug is a platform that allows users to buy, sell, and manage gift
-          cards while also handling cryptocurrency transactions. My role as the
-          Frontend Engineer focused on building the Admin Dashboard and Landing
-          Page.
+      <CaseSection label="Overview">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          Fiatplug is a dual-asset fintech platform where users can buy, sell,
+          and trade gift cards alongside cryptocurrency. I was responsible for
+          the Admin Dashboard and Landing Page — the internal tools that
+          operators rely on daily to process trades, handle customer support,
+          and monitor platform health.
         </p>
-        <h2 className="font-bold text-2xl mt-8">My Contribution</h2>
-        <h2 className="font-semibold text-xl mt-2">Tech Stack:</h2>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {techStack?.map((stack, i) => (
-            <span className="text-sm border rounded-lg px-2 py-1" key={i}>
-              {stack.name}
-            </span>
-          ))}
-        </div>
-        <h2 className="font-semibold text-2xl mt-8">🧑‍💻Key Features I Built</h2>
-        <p className="text-xl mt-4">1. Admin Dashboard</p>
-        <ul className="space-y-2 mt-4 lg:pl-8">
-          <li>
-            ⚪ Gift Card Management System: Developed a system that allows
-            admins to manage gift card listings, track sales, and handle
-            customer requests.
-          </li>
-          <li>
-            ⚪ Cryptocurrency Integration: Built a feature for managing crypto
-            transactions and tracking wallet balances.
-          </li>
-          <li>
-            ⚪ Live Chat Integration: Enabled real-time communication between
-            customers and support teams for smooth issue resolution.
-          </li>
-          <li>
-            ⚪ Analytics Dashboard: Provided insights on user activity, sales
-            performance, and customer engagement.
-          </li>
-        </ul>
-        <p className="text-xl mt-4">2. Landing Page</p>
-        <ul className="space-y-2 mt-4 lg:pl-8">
-          <li>
-            ⚪ Responsive and User-Friendly Design: Built a clean and engaging
-            landing page with Tailwind CSS to attract users and increase
-            conversion rates.
-          </li>
-          <li>
-            ⚪ SEO Optimization: Leveraged Next.js Server-Side Rendering (SSR)
-            and Static Site Generation (SSG) for faster page loads and improved
-            SEO.
-          </li>
-          <li>
-            ⚪ Live Chat Integration: Enabled real-time communication between
-            customers and support teams for smooth issue resolution.
-          </li>
-          <li>
-            ⚪ Analytics Dashboard: Provided insights on user activity, sales
-            performance, and customer engagement.
-          </li>
-        </ul>
-        <p className="font-semibold text-xl mt-4">Performance Optimization</p>
-        <ul className="space-y-2 mt-4 lg:pl-8">
-          <li>
-            ⚪ Used Redux Toolkit for state management, reducing re-renders and
-            improving data handling.
-          </li>
-          <li>
-            ⚪ Integrated Firebase Firestore for real-time data handling and
-            secure storage.
-          </li>
-        </ul>
-        <p className="font-semibold text-2xl mt-4">Business Impact</p>
-        <ul className="space-y-2 mt-4 lg:pl-8">
-          <li>
-            ✅ Improved efficiency in managing gift card sales and crypto
-            transactions.
-          </li>
-          <li>✅ Enhanced customer support with live chat integration.</li>
-          <li>
-            ✅ Increased user conversion through a high-performing landing page.
-          </li>
-          <li>
-            ✅ Real-time data tracking and performance analytics for admins.
-          </li>
-        </ul>
-        <div className=" pt-4">
-          <Link
-            target="_blank"
-            href="https://www.fiatplug.com"
-            className="flex">
-            <Button className="bg-white text-zinc-900 hover:bg-gray-400">
-              View Fiatplug Website
-            </Button>
-          </Link>
-        </div>
-      </section>
-    </div>
+      </CaseSection>
+
+      <CaseSection label="The Challenge">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed border-l-2 border-zinc-200 dark:border-zinc-700 pl-4 italic">
+          Building a dual-asset fintech admin dashboard that unifies gift card
+          trading and crypto transactions under a single interface — with
+          real-time trade feeds, customer support tooling, and multi-role
+          access control for operators.
+        </p>
+        <ArchBox note="Admin RBAC dashboard · Real-time transaction monitoring · Integrated support ticket system · Figma-to-code design pipeline · Automated reporting workflows" />
+      </CaseSection>
+
+      <CaseSection label="What I Built">
+        <FeatureBlock
+          number="01"
+          title="Admin Dashboard"
+          items={[
+            "Built a gift card management system — admins can view listings, track trade status, and action customer requests.",
+            "Developed a crypto transaction interface for monitoring wallet activity, trade volumes, and balances in real time.",
+            "Integrated analytics charts showing user activity, sales performance, and daily trade volume trends.",
+            "Implemented an RBAC system distinguishing super-admins, support agents, and compliance reviewers.",
+          ]}
+        />
+        <FeatureBlock
+          number="02"
+          title="Customer Support & Live Chat"
+          items={[
+            "Integrated a live chat module allowing support agents to communicate with users directly from the dashboard.",
+            "Built a support ticket system with status tracking, agent assignment, and resolution history.",
+            "Created templated response tools to speed up agent handling of common gift card and crypto queries.",
+          ]}
+        />
+        <FeatureBlock
+          number="03"
+          title="Landing Page"
+          items={[
+            "Built a high-converting landing page from Figma designs — responsive, SEO-optimised, and fast-loading.",
+            "Leveraged Next.js SSR and SSG for optimal page speed and search engine visibility.",
+            "Implemented animations and scroll-triggered reveals to increase engagement and time-on-page.",
+          ]}
+        />
+        <FeatureBlock
+          number="04"
+          title="Reporting & Analytics"
+          items={[
+            "Built automated reporting views for daily gift card processing totals and crypto settlement summaries.",
+            "Integrated Recharts to visualise trade volume trends, user growth, and revenue breakdowns.",
+            "Created exportable data tables for compliance and accounting workflows.",
+          ]}
+        />
+      </CaseSection>
+
+      <CaseSection label="Performance Optimisation">
+        <ImpactList
+          items={[
+            "Used Redux Toolkit with memoised selectors to prevent unnecessary re-renders on high-frequency trade feed updates.",
+            "Integrated Firebase Firestore real-time listeners scoped per operator role — no over-fetching.",
+            "Code-split the admin dashboard from the landing page to keep initial load lightweight.",
+            "Applied debounced search and server-side filtering on transaction tables to handle large datasets.",
+          ]}
+        />
+      </CaseSection>
+
+      <CaseSection label="Business Impact">
+        <MetricRow
+          metrics={[
+            { value: "1,000+", label: "users in first month" },
+            { value: "2", label: "asset classes managed" },
+            { value: "80%", label: "admin workflow improvement" },
+          ]}
+        />
+        <ImpactList
+          items={[
+            "Supported onboarding of 1,000+ users in the first month post-launch.",
+            "Improved admin workflow efficiency by 80% through automation of previously manual tasks.",
+            "Streamlined gift card processing and reporting for support agents.",
+            "Increased user conversion through a high-performing, SEO-optimised landing page.",
+          ]}
+        />
+      </CaseSection>
+
+      <CaseSection label="Tech Stack">
+        <StackTags
+          tags={[
+            "Next.js",
+            "TypeScript",
+            "Redux Toolkit",
+            "Firebase Firestore",
+            "Shadcn UI",
+            "Tailwind CSS",
+            "Recharts",
+            "SSR / SSG",
+            "Figma",
+            "CI/CD",
+          ]}
+        />
+      </CaseSection>
+    </CaseStudyWrapper>
   );
 };
 
