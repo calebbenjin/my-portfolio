@@ -19,11 +19,11 @@ const fadeUp = {
 const ProjectSections = () => {
   return (
     <section className="mt-20">
-      <div className="flex items-center justify-between mb-12 border-t border-zinc-200 dark:border-zinc-800/60 pt-10">
-        <p className="text-xs text-zinc-400 dark:text-zinc-500 uppercase tracking-widest font-medium">
+      <div className="flex items-center justify-between mb-12 border-t border-zinc-400 dark:border-zinc-800/60 pt-10">
+        <p className="text-xs text-zinc-800 dark:text-zinc-500 uppercase tracking-widest font-bold">
           Selected Work
         </p>
-        <span className="text-xs text-zinc-400 dark:text-zinc-700">
+        <span className="text-xs text-zinc-600 dark:text-zinc-700">
           {projects.length} case studies
         </span>
       </div>
@@ -91,10 +91,10 @@ const ProjectSections = () => {
 
             {/* Number + Category */}
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs text-zinc-400 dark:text-zinc-700 font-mono">
+              <span className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="text-xs px-2.5 py-1 rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-500">
+              <span className="text-xs px-2.5 py-1 rounded-full border border-zinc-300 dark:border-zinc-700 text-zinc-300">
                 {project.category}
               </span>
             </div>
@@ -102,11 +102,11 @@ const ProjectSections = () => {
             {/* Title */}
             <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
               {project.title}
-              <span className="text-zinc-400 dark:text-zinc-600 font-normal ml-2 text-base">
+              <span className="text-zinc-500 dark:text-zinc-400 font-normal ml-2 text-base">
                 — {project.subtitle}
               </span>
             </h3>
-            <p className="text-xs text-zinc-400 dark:text-zinc-600 mt-1">
+            <p className="text-xs font-semibold text-zinc-600 dark:text-zinc-400 mt-1">
               {project.role}
             </p>
 
@@ -117,7 +117,7 @@ const ProjectSections = () => {
 
             {/* Architecture callout */}
             <div className="mt-4 px-4 py-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
-              <p className="text-xs text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-1.5">
+              <p className="text-xs text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mb-1.5">
                 Architecture
               </p>
               <p className="text-xs text-zinc-700 dark:text-zinc-300 font-mono leading-relaxed">
@@ -130,7 +130,7 @@ const ProjectSections = () => {
               {project.stack.map((tech, j) => (
                 <span
                   key={j}
-                  className="text-xs px-2 py-1 rounded-md bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-500"
+                  className="text-xs px-2 py-1 rounded-md bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400"
                 >
                   {tech}
                 </span>
@@ -147,7 +147,7 @@ const ProjectSections = () => {
                   <p className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
                     {metric.value}
                   </p>
-                  <p className="text-xs text-zinc-400 dark:text-zinc-600 mt-0.5">
+                  <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5">
                     {metric.label}
                   </p>
                 </div>
@@ -167,7 +167,7 @@ const ProjectSections = () => {
                   href={project.siteurl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-sm text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors duration-200"
+                  className="flex items-center gap-1.5 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors duration-200"
                 >
                   Visit Site <ArrowUpRight size={13} />
                 </Link>
