@@ -15,7 +15,7 @@ const UserProfile = () => {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: "easeOut" }}
-        className="flex items-start gap-5"
+        className="flex items-start gap-5 lg:pt-20"
       >
         <div className="w-20 h-20 rounded-full overflow-hidden ring-1 ring-black/10 dark:ring-white/10 flex-shrink-0">
           <Image

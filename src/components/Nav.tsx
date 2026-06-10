@@ -10,7 +10,7 @@ interface NavProps {
 
 const Nav = ({ back = false }: NavProps) => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-14 flex items-center justify-between px-6 backdrop-blur-md bg-white/90 dark:bg-zinc-950/90 border-b border-zinc-100 dark:border-zinc-800/60">
+    <nav className="fixed top-0 left-0 right-0 mx-auto lg:w-[52%] w-11/12 z-50 h-14 flex items-center justify-between px-6 backdrop-blur-md bg-white/90 dark:bg-zinc-950/90 border-b border-zinc-100 dark:border-zinc-800/60">
       {back ? (
         <Link
           href="/"
@@ -20,8 +20,8 @@ const Nav = ({ back = false }: NavProps) => {
           Back to portfolio
         </Link>
       ) : (
-        <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
-          Caleb Benjamin
+        <span className="text-xl font-extrabold text-zinc-900 dark:text-zinc-100">
+          {"</>"}Caleb.
         </span>
       )}
       <ThemeToggle />
