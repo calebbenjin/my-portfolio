@@ -68,7 +68,7 @@ const aiTools = [
 const IntroSection = () => {
   return (
     <motion.section
-      className="mt-14 pt-10 border-t border-zinc-200 dark:border-zinc-800/60"
+      className="mt-14 pt-10 border-t border-zinc-200 dark:border-zinc-600"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.15 }}
@@ -76,7 +76,7 @@ const IntroSection = () => {
     >
       {/* Headline */}
       <motion.p
-        className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 leading-snug"
+        className="text-2xl font-bold text-zinc-900 dark:text-white leading-snug"
         variants={fadeIn}
         custom={0}
       >
@@ -86,7 +86,7 @@ const IntroSection = () => {
 
       {/* Bio */}
       <motion.div
-        className="mt-7 space-y-4 text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm"
+        className="mt-7 space-y-4 text-zinc-600 dark:text-zinc-300 leading-relaxed text-sm"
         variants={fadeIn}
         custom={1}
       >
@@ -94,7 +94,7 @@ const IntroSection = () => {
           Senior Frontend Engineer with 6+ years of experience shipping
           production-grade applications across fintech, logistics, agritech, and
           SaaS. I founded{" "}
-          <span className="text-zinc-900 dark:text-zinc-200 font-medium">
+          <span className="text-zinc-900 dark:text-zinc-100 font-semibold">
             EachBlock
           </span>
           , a development studio where I&apos;ve led MVP builds and full-scale
@@ -115,18 +115,18 @@ const IntroSection = () => {
 
       {/* Core Competencies */}
       <motion.div className="mt-8" variants={fadeIn} custom={2}>
-        <p className="text-xs text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-4">
+        <p className="text-xs text-zinc-800 dark:text-zinc-400 font-semibold uppercase tracking-widest mb-4">
           Core Competencies
         </p>
         <div className="grid grid-cols-2 gap-3">
           {competencies.map((item, i) => (
             <motion.div
               key={i}
-              className="border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors duration-200"
+              className="border border-zinc-200 dark:border-zinc-500 rounded-xl p-4 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors duration-200"
               variants={fadeIn}
               custom={3 + i}
             >
-              <p className="text-xs text-zinc-400 dark:text-zinc-500 uppercase tracking-widest font-medium mb-1.5">
+              <p className="text-xs text-zinc-700 dark:text-zinc-300 uppercase tracking-widest font-semibold mb-1.5">
                 {item.area}
               </p>
               <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
@@ -139,17 +139,17 @@ const IntroSection = () => {
 
       {/* AI Workflow */}
       <motion.div
-        className="mt-10 pt-8 border-t border-zinc-200 dark:border-zinc-800/60"
+        className="mt-10 pt-8 border-t border-zinc-400 dark:border-zinc-600"
         variants={fadeIn}
         custom={7}
       >
-        <p className="text-xs text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-5">
+        <p className="text-xs text-zinc-600 dark:text-zinc-400 font-semibold uppercase tracking-widest mb-5">
           AI-Augmented Workflow
         </p>
         <div className="space-y-6">
           {aiTools.map((group, gi) => (
             <div key={gi}>
-              <p className="text-xs font-medium text-zinc-500 dark:text-zinc-500 mb-3">
+              <p className="text-xs font-semibold text-zinc-600 dark:text-zinc-400 mb-3">
                 {group.category}
               </p>
               <div className="space-y-2">
@@ -161,7 +161,7 @@ const IntroSection = () => {
                     <span className="text-xs font-semibold text-zinc-800 dark:text-zinc-200 min-w-[160px] flex-shrink-0 pt-px">
                       {tool.name}
                     </span>
-                    <span className="text-xs text-zinc-500 dark:text-zinc-500 leading-relaxed">
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
                       {tool.desc}
                     </span>
                   </div>

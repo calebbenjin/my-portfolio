@@ -37,14 +37,14 @@ const WorkTogetherSection = () => {
   return (
     <>
       <motion.section
-        className="mt-20 pt-10 border-t border-zinc-200 dark:border-zinc-800/60"
+        className="mt-20 pt-10 border-t border-zinc-300 dark:border-zinc-600"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
       >
         <motion.p
-          className="text-xs text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mb-4"
+          className="text-xs text-zinc-600 dark:text-zinc-400 uppercase font-bold tracking-widest mb-4"
           variants={fadeIn}
           custom={0}
         >
@@ -74,7 +74,7 @@ const WorkTogetherSection = () => {
           {/* Resume — opens inline modal */}
           <button
             onClick={() => setShowResume(true)}
-            className="flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 rounded-lg px-4 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all duration-200"
+            className="flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-600 rounded-lg px-4 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all duration-200"
           >
             <PiAddressBookLight size={14} />
             Resume
@@ -86,7 +86,7 @@ const WorkTogetherSection = () => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 rounded-lg px-4 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all duration-200"
+              className="flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-600 rounded-lg px-4 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all duration-200"
             >
               {link.icon}
               {link.label}
