@@ -56,7 +56,7 @@ const fadeIn = {
 const HeroPage = () => {
   return (
     <section className="">
-      <div className="grid md:grid-cols-5 grid-cols-1 md:gap-x-8 gap-y-6 mx-auto lg:w-10/12 w-11/12 md:pt-20 pt-6">
+      <div className="grid md:grid-cols-5 grid-cols-1 md:gap-x-8 gap-y-6 mx-auto lg:w-10/12 w-11/12 md:pt-40 pt-6">
         <div className="col-span-2 relative">
           <nav className=" sticky top-2 z-50 bg-zinc-800 border border-zinc-600 w-full py-3 md:px-6 px-2 rounded-full md:hidden flex md:gap-0 gap-y-5 flex-wrap justify-between items-start mb-4 md:shadow-md shadow-accent-foreground">
             {navLinks.map((link, index) => (
