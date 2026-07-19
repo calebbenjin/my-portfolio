@@ -77,7 +77,7 @@ const IntroSection = () => {
     >
       {/* Headline */}
       <motion.p
-        className="text-2xl font-bold text-zinc-900 dark:text-white leading-snug"
+        className="xl:text-2xl text-lg font-bold text-zinc-900 dark:text-white leading-snug"
         variants={fadeIn}
         custom={0}
       >

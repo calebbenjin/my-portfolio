@@ -19,7 +19,7 @@ const UserProfile = () => {
         transition={{ duration: 0.55, ease: "easeOut" }}
         className="flex items-start gap-5 lg:pt-20"
       >
-        <div className="w-30 h-30 rounded-full overflow-hidden ring-1 ring-black/10 dark:ring-white/10 flex-shrink-0">
+        <div className="w-20 h-20 xl:w-30 xl:h-30 rounded-full overflow-hidden ring-1 ring-black/10 dark:ring-white/10 flex-shrink-0">
           <Image
             src="/caleb-profile-image.jpg"
             alt="Caleb Benjamin"
