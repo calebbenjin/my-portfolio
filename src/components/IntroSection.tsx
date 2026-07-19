@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -80,8 +81,8 @@ const IntroSection = () => {
         variants={fadeIn}
         custom={0}
       >
-        I architect fast, scalable interfaces that turn complex backend logic
-        into intuitive user experiences.
+        I'm passionate about understanding how things work and using technology
+        to solve meaningful problems.
       </motion.p>
 
       {/* Bio */}
@@ -91,6 +92,26 @@ const IntroSection = () => {
         custom={1}
       >
         <p>
+          Beyond writing code, I help non-technical founders transform ambitious
+          ideas into scalable SaaS products, from strategy and architecture to
+          launch at{" "}
+          <span className="text-zinc-900 dark:text-zinc-100 font-semibold">
+            EachBlock
+          </span>
+          , while they focus on distribution & marketing.
+        </p>
+        <p>
+          When I'm not building for founders, I'm creating SaaS products of my
+          own with the goal of building a portfolio of businesses that generate
+          over $100K in MRR. 🎯{" "}
+          <Link href="/my-saas-projects">
+            <span className="text-zinc-600 font-bold underline dark:text-zinc-400 text-sm">
+              You can find them here.
+            </span>
+          </Link>
+        </p>
+
+        {/* <p>
           Senior Frontend Engineer with 6+ years of experience shipping
           production-grade applications across fintech, logistics, agritech, and
           SaaS. I founded{" "}
@@ -99,17 +120,13 @@ const IntroSection = () => {
           </span>
           , a development studio where I&apos;ve led MVP builds and full-scale
           products for startups across Nigeria, Canada, the US, and Europe.
-        </p>
+        </p> */}
+
         <p>
           I work directly with CTOs and founders to make fast, high-quality
           architectural decisions — from choosing the right rendering strategy
           to designing component systems that scale across multiple apps and
           user roles.
-        </p>
-        <p>
-          I&apos;ve mentored 20+ engineers, shipped to 5,000+ concurrent users,
-          and consistently reduced frontend complexity while increasing delivery
-          speed.
         </p>
       </motion.div>
 
@@ -138,7 +155,7 @@ const IntroSection = () => {
       </motion.div>
 
       {/* AI Workflow */}
-      <motion.div
+      {/* <motion.div
         className="mt-10 pt-8 border-t border-zinc-400 dark:border-zinc-600"
         variants={fadeIn}
         custom={7}
@@ -170,7 +187,7 @@ const IntroSection = () => {
             </div>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
     </motion.section>
   );
 };

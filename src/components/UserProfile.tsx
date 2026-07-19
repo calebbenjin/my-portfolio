@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FileText } from "lucide-react";
 import { ResumeModal } from "./ResumeModal";
+import Link from "next/link";
+import { TfiEmail } from "react-icons/tfi";
 
 const UserProfile = () => {
   const [showResume, setShowResume] = useState(false);
@@ -17,9 +19,9 @@ const UserProfile = () => {
         transition={{ duration: 0.55, ease: "easeOut" }}
         className="flex items-start gap-5 lg:pt-20"
       >
-        <div className="w-20 h-20 rounded-full overflow-hidden ring-1 ring-black/10 dark:ring-white/10 flex-shrink-0">
+        <div className="w-30 h-30 rounded-full overflow-hidden ring-1 ring-black/10 dark:ring-white/10 flex-shrink-0">
           <Image
-            src="/eachblock-founder.jpg"
+            src="/caleb-profile-image.jpg"
             alt="Caleb Benjamin"
             width={100}
             height={100}
@@ -39,13 +41,25 @@ const UserProfile = () => {
           <p className="text-sm text-zinc-600 dark:text-zinc-300 mt-0.5">
             Senior Frontend Engineer · React, TypeScript & Next.js
           </p>
-          <button
-            onClick={() => setShowResume(true)}
-            className="mt-3 flex items-center gap-1.5 text-xs text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white border border-zinc-200 dark:border-zinc-500 rounded-lg px-3 py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-200"
-          >
-            <FileText size={12} />
-            View Resume
-          </button>
+          <div className="flex gap-3 mt-3">
+            <button
+              onClick={() => setShowResume(true)}
+              className="flex items-center gap-1.5 text-xs text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white border border-zinc-200 dark:border-zinc-500 rounded-lg px-3 py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-200"
+            >
+              <FileText size={12} />
+              View Resume
+            </button>
+            <Link
+              href="mailto:calebbenjin@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="flex items-center gap-1.5 text-xs text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white border border-zinc-200 dark:border-zinc-500 rounded-lg px-3 py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-200">
+                <TfiEmail size={14} />
+                Email me
+              </button>
+            </Link>
+          </div>
         </div>
       </motion.div>
 
