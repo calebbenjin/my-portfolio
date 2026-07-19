@@ -36,35 +36,35 @@ const competencies = [
   },
 ];
 
-const aiTools = [
-  {
-    category: "Development",
-    tools: [
-      {
-        name: "Claude (Anthropic)",
-        desc: "Architecture decisions, deep code review, complex debugging, and technical writing",
-      },
-      {
-        name: "ChatGPT / GPT-4",
-        desc: "Documentation drafting, edge-case exploration, and API design brainstorming",
-      },
-    ],
-  },
+// const aiTools = [
+//   {
+//     category: "Development",
+//     tools: [
+//       {
+//         name: "Claude (Anthropic)",
+//         desc: "Architecture decisions, deep code review, complex debugging, and technical writing",
+//       },
+//       {
+//         name: "ChatGPT / GPT-4",
+//         desc: "Documentation drafting, edge-case exploration, and API design brainstorming",
+//       },
+//     ],
+//   },
 
-  {
-    category: "Production AI",
-    tools: [
-      {
-        name: "Vercel AI SDK",
-        desc: "Streaming AI responses, multi-step agents, and AI-powered UI features",
-      },
-      {
-        name: "Claude API",
-        desc: "Embedding AI reasoning into product features — summarisation, classification, Q&A",
-      },
-    ],
-  },
-];
+//   {
+//     category: "Production AI",
+//     tools: [
+//       {
+//         name: "Vercel AI SDK",
+//         desc: "Streaming AI responses, multi-step agents, and AI-powered UI features",
+//       },
+//       {
+//         name: "Claude API",
+//         desc: "Embedding AI reasoning into product features — summarisation, classification, Q&A",
+//       },
+//     ],
+//   },
+// ];
 
 const IntroSection = () => {
   return (
@@ -81,8 +81,8 @@ const IntroSection = () => {
         variants={fadeIn}
         custom={0}
       >
-        I'm passionate about understanding how things work and using technology
-        to solve meaningful problems.
+        I&apos;m passionate about understanding how things work and using
+        technology to solve meaningful problems.
       </motion.p>
 
       {/* Bio */}
@@ -101,9 +101,9 @@ const IntroSection = () => {
           , while they focus on distribution & marketing.
         </p>
         <p>
-          When I'm not building for founders, I'm creating SaaS products of my
-          own with the goal of building a portfolio of businesses that generate
-          over $100K in MRR. 🎯{" "}
+          When I&apos;m not building for founders, I&apos;m creating SaaS
+          products of my own with the goal of building a portfolio of businesses
+          that generate over $100K in MRR. 🎯{" "}
           <Link href="/my-saas-projects">
             <span className="text-zinc-600 font-bold underline dark:text-zinc-400 text-sm">
               You can find them here.

@@ -9,7 +9,7 @@ import WorkTogetherSection from "@/components/WorkTogetherSection";
 export default function Home() {
   return (
     <>
-      <PageLoader />
+      {/* <PageLoader /> */}
       <Nav />
       <main className="mx-auto lg:w-[52%] w-11/12 pt-24 pb-4">
         <UserProfile />
